@@ -7,13 +7,14 @@ import retrofit2.http.GET
 
 interface API {
     //https://github.com/public-apis/public-apis
-    @GET()
+    @GET("endpoint")
     fun getData(): Observable<Any>
 
     companion object{
         fun createApi(): API =
             Retrofit.Builder()
                 .baseUrl("")
+                //.addConverterFactory()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
                 .create(API::class.java)

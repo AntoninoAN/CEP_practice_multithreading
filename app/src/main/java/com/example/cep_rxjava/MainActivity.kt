@@ -81,8 +81,8 @@ class MainActivity : AppCompatActivity() {
                 .doFinally {
                         Log.d(TAG, "finallyDo()")
                     }
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())//upstream
+                .observeOn(AndroidSchedulers.mainThread())//downstream
                 .subscribe( {
                     mTextView!!.text = it
                 }, {
