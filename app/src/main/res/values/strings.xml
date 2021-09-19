@@ -9,4 +9,5 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="main_activity_describes_the_lifecycle_of_the_observable">Main Activity Describes the Lifecycle of the Observable</string>
 </resources>

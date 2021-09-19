@@ -12,15 +12,17 @@
         <activity
             android:name=".MainActivity4"
             android:label="@string/title_activity_main4"
-            android:theme="@style/Theme.CEP_RxJava.NoActionBar"></activity>
+            android:theme="@style/Theme.CEP_RxJava.NoActionBar"/>
         <activity android:name=".MainActivity3" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MainActivity2">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity2">
+
         </activity>
     </application>
 

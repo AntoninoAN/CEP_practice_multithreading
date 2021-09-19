@@ -3,8 +3,12 @@ package com.example.cep_rxjava
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.subjects.PublishSubject
+import android.widget.TextView
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.subjects.PublishSubject
+
+//import io.reactivex.android.schedulers.AndroidSchedulers
+//import io.reactivex.subjects.PublishSubject
 
 private const val TAG = "MainActivity3"
 
@@ -24,6 +28,7 @@ class MainActivity3 : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
                 Log.d(TAG, "onCreate: $it")
+                findViewById<TextView>(R.id.display).text = it.toString()
             }
         bus.send(12)
     }

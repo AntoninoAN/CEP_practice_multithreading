@@ -6,9 +6,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cep_rxjava.remote.API
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
+//import io.reactivex.android.schedulers.AndroidSchedulers
+//import io.reactivex.disposables.Disposable
+//import io.reactivex.schedulers.Schedulers
 
 class MainActivity4 : AppCompatActivity() {
 

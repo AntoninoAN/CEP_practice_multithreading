@@ -1,14 +1,20 @@
 package com.example.cep_rxjava
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.functions.Consumer
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.functions.Consumer
+
+//import io.reactivex.Observable
+//import io.reactivex.android.schedulers.AndroidSchedulers
+//import io.reactivex.disposables.Disposable
+//import io.reactivex.functions.Consumer
 
 private const val TAG = "MainActivity2"
 class MainActivity2 : AppCompatActivity() {
@@ -45,7 +51,15 @@ class MainActivity2 : AppCompatActivity() {
                 }
             .subscribe({
                     mOutputTextView1.text = Integer.toString(it!!) + " OnCreate()"
-                }, errorHandler)
+                },
+                errorHandler)
+        findViewById<FloatingActionButton>(R.id.next_activity).setOnClickListener { nextActivity() }
+    }
+
+    private fun nextActivity() {
+        startActivity(
+            Intent(this, MainActivity3::class.java)
+        )
     }
 
     override fun onStart() {
